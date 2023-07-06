@@ -3,6 +3,7 @@ import time
 import pandas as pd
 import polars as pl
 import psycopg2
+from psycopg2.errors import UndefinedTable
 import json
 
 from configparser import ConfigParser
@@ -149,16 +150,36 @@ class RateLimitedAPI:
         return response
 
     def get_area_types(self, population_type, return_type="json"):
-        endpoint = "area-types"
-        self.create_table_if_not_exists(endpoint)
+        
+        areas_query = """
+        SELECT data->>'name' as name FROM "area-types" where data->>'label' = '{}'
+        """.format("All usual residents")
+        try:
+            response = self.get_results_from_database(areas_query)
 
-        select_query = """
-            SELECT data->>'name' as name FROM "population-types" where data->>'label' = '{}'
-            """.format("All usual residents")
+        except UndefinedTable:
+            endpoint = "area-types"
+            self.create_table_if_not_exists(endpoint)
 
-        response = self.get_results_from_database(select_query)
-        print(response)
+            select_query = """
+                SELECT data->>'name' as name FROM "population-types" where data->>'label' = '{}'
+                """.format("All usual residents")
 
+            response = self.get_results_from_database(select_query)
+
+            self.create_table_if_not_exists("area-types")
+            for _,name in response['name'].items():
+                endpoint = 'population-types/{population_type}/area-types'.format(population_type=name)
+                response = self.make_request(endpoint, return_type)
+                response = [dict(item, **{'population-type':name}) for item in response]
+                for item in response:
+                    self.add_to_database("area-types", item)
+            
+            response = self.get_results_from_database(areas_query)
+        return response
+
+            # add the population_type related 
+            # area_types.append(area_types)
         # for item in response["name"]:
         #     endpoint = "population-types/{population_type}/area-types/{area_type}/areas".format(population_type=population_type, area_type=item)
         #     response = self.make_request(endpoint, return_type)

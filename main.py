@@ -3,8 +3,8 @@ from ukcensus.CensusData import RateLimitedAPI
 if __name__ == "__main__":
     api = RateLimitedAPI()
 
-    # population_types = api.get_population_types()
+    population_types = api.get_population_types()
 
-
-    # print(population_types)
-    print(api.get_area_types("dsf"))
+    print(population_types)
+    print(api.get_area_types("unused-pop-type-label"))
+    # print(api.get_area_types("All usual residents"))
