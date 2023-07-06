@@ -14,6 +14,8 @@ class RateLimitedAPI:
         self.db_host = None
         self.db_port = None
         self.db_url = None
+        self.db_user = None
+        self.db_password = None
         self.requests_made = 0
         self.start_time = time.time()
         self.load_config()
@@ -25,6 +27,8 @@ class RateLimitedAPI:
         self.db_host = config.get('DB', 'host')
         self.db_port = config.get('DB', 'port')
         self.db_url = config.get('DB', 'url')
+        self.db_user = config.get('DB', 'username')
+        self.db_password = config.get('DB', 'password')
 
     def make_request(self, endpoint, return_type="json"):
         elapsed_time = time.time() - self.start_time
@@ -91,7 +95,7 @@ class RateLimitedAPI:
         self.requests_made = 0
 
     def create_table_if_not_exists(self, table_name):
-        conn = psycopg2.connect(host=self.db_host, port=self.db_port, dbname=self.db_url)
+        conn = psycopg2.connect(host=self.db_host, port=self.db_port, dbname=self.db_url, user=self.db_user)
         cursor = conn.cursor()
 
         create_query = """
@@ -107,7 +111,7 @@ class RateLimitedAPI:
         conn.close()
 
     def add_to_database(self,table_name, data):
-        conn = psycopg2.connect(host=self.db_host, port=self.db_port, dbname=self.db_url)
+        conn = psycopg2.connect(host=self.db_host, port=self.db_port, dbname=self.db_url, user=self.db_user)
         cursor = conn.cursor()
 
         insert_query = """
@@ -120,24 +124,52 @@ class RateLimitedAPI:
         conn.commit()
         cursor.close()
         conn.close()
+    
+
+    def get_results_from_database(self, select_query):
+        conn = psycopg2.connect(host=self.db_host, port=self.db_port, dbname=self.db_url, user=self.db_user)
+        cursor = conn.cursor()
+
+        cursor.execute(select_query)
+        results = cursor.fetchall()
+
+        cursor.close()
+        conn.close()
+
+        return pd.DataFrame(data=results, columns=[x[0] for x in cursor.description])
 
     def get_population_types(self, return_type="json"):
-        endpoint = "population-types"
-        self.create_table_if_not_exists(endpoint)
+        endpoint = "population-types?limit=100"
+        self.create_table_if_not_exists("population-types")
         response = self.make_request(endpoint, return_type)
 
-        self.add_to_database(endpoint, response)
+        for item in response: 
+            self.add_to_database("population-types", item)
 
         return response
 
     def get_area_types(self, population_type, return_type="json"):
-        
         endpoint = "area-types"
         self.create_table_if_not_exists(endpoint)
 
-        endpoint = 'population-types/{population_type}/area-types/lsoa/areas'.format(population_type=population_type)
-        response = self.make_request(endpoint, return_type)
+        select_query = """
+            SELECT data->>'name' as name FROM "population-types" where data->>'label' = '{}'
+            """.format("All usual residents")
 
-        self.add_to_database(endpoint, response)
+        response = self.get_results_from_database(select_query)
+        print(response)
 
-        return response
+        # for item in response["name"]:
+        #     endpoint = "population-types/{population_type}/area-types/{area_type}/areas".format(population_type=population_type, area_type=item)
+        #     response = self.make_request(endpoint, return_type)
+
+        #     self.add_to_database(endpoint, response)
+
+        # for item in response["data"]:
+
+        #     endpoint = 'population-types/{population_type}/area-types/lsoa/areas'.format(population_type=population_type)
+        #     response = self.make_request(endpoint, return_type)
+
+        #     self.add_to_database(endpoint, response)
+
+        # return response
