@@ -1,0 +1,513 @@
+{
+	"info": {
+		"_postman_id": "ffb3d45c-62d6-4cc6-8341-92497d5d4b1c",
+		"name": "cencus",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "population-types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.beta.ons.gov.uk/v1/population-types"
+			},
+			"response": [
+				{
+					"name": "population-types",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://api.beta.ons.gov.uk/v1/population-types"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Wed, 05 Jul 2023 13:15:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, GET, HEAD, POST, PUT, OPTIONS, PATCH"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Set-Cookie",
+							"value": "__cf_bm=jMuZxPw1_Ns5q5_q.3_966iR7Km6Zz0fjXvAEodLzF0-1688562934-0-AT5gWRyQRwFus2RfNGbS7Y2LPts8FEmakijPVdJ2bySHCphbynzRMEjvGCTBaCUl5uIGo0BOC6lH9B1WUfJKGkM=; path=/; expires=Wed, 05-Jul-23 13:45:34 GMT; domain=.ons.gov.uk; HttpOnly; Secure; SameSite=None"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e1fe09deaf08589-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"limit\": 30,\n    \"offset\": 0,\n    \"count\": 30,\n    \"total_count\": 39,\n    \"items\": [\n        {\n            \"name\": \"atc-rm-pk1-dwl-ct-ltla\",\n            \"label\": \"Dwellings\",\n            \"description\": \"Dwellings\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk1-dwl-ct-msoa\",\n            \"label\": \"Dwellings\",\n            \"description\": \"Dwellings\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk1-dwl-ct-oa\",\n            \"label\": \"Dwellings\",\n            \"description\": \"Dwellings\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk2-hrp-ct-oa\",\n            \"label\": \"All Household Reference Persons\",\n            \"description\": \"All Household Reference Persons\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk2-ur-ct-oa\",\n            \"label\": \"All usual residents\",\n            \"description\": \"All usual residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk2-urfamdc-ct-oa\",\n            \"label\": \"All usual residents in families with dependent children\",\n            \"description\": \"All usual residents in families with dependent children\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk2-urhh-ct-msoa\",\n            \"label\": \"All usual residents in households\",\n            \"description\": \"All usual residents in households\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk3-ce-ct-msoa\",\n            \"label\": \"All communal establishments\",\n            \"description\": \"All communal establishments\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk3-fam-ct-oa\",\n            \"label\": \"All families\",\n            \"description\": \"All families\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk3-hh-ct-ltla\",\n            \"label\": \"All households\",\n            \"description\": \"All households\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk3-hh-ct-oa\",\n            \"label\": \"All households\",\n            \"description\": \"All households\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk3-hhsp-ct-oa\",\n            \"label\": \"All household spaces\",\n            \"description\": \"All household spaces\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk3-urdc-ct-oa\",\n            \"label\": \"All dependent children\",\n            \"description\": \"All dependent children\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk3-urdcfam-ct-oa\",\n            \"label\": \"All dependent children in families\",\n            \"description\": \"All dependent children in families\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-pk3-urdchh-ct-msoa\",\n            \"label\": \"All dependent children in households\",\n            \"description\": \"All dependent children in households\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-sogi-ur16o-ct-ltla\",\n            \"label\": \"All usual residents aged 16 years and over\",\n            \"description\": \"All usual residents aged 16 years and over\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-rm-sogi-ur16ohh-ct-ltla\",\n            \"label\": \"All usual residents aged 16 years and over in households\",\n            \"description\": \"All usual residents aged 16 years and over in households\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-st-pk2-str-ct-ltla\",\n            \"label\": \"All non-UK born short-term residents\",\n            \"description\": \"All non-UK born short-term residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-st-pk2-str-ct-region\",\n            \"label\": \"All non-UK born short-term residents\",\n            \"description\": \"All non-UK born short-term residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-st-pk2-strhhsp-ct-ltla\",\n            \"label\": \"All non-UK born short-term residents in households\",\n            \"description\": \"All non-UK born short-term residents in households\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-demmig-hh-ct-oa\",\n            \"label\": \"All households\",\n            \"description\": \"All households\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-demmig-str-ct-oa\",\n            \"label\": \"All non-UK born short-term residents\",\n            \"description\": \"All non-UK born short-term residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-demmig-ur-ct-oa\",\n            \"label\": \"All usual residents\",\n            \"description\": \"All usual residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-demmig-ur-pd-oa\",\n            \"label\": \"All usual residents\",\n            \"description\": \"All usual residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-ed-ftetta-ct-oa\",\n            \"label\": \"All schoolchildren and full-time students aged 5 years and over at their term-time address\",\n            \"description\": \"All schoolchildren and full-time students aged 5 years and over at their term-time address\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-eilr-ur-ct-ltla\",\n            \"label\": \"All usual residents aged 3 years and over\",\n            \"description\": \"All usual residents aged 3 years and over\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-eilr-ur-ct-msoa\",\n            \"label\": \"All usual residents\",\n            \"description\": \"All usual residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-hduc-ur-asp-ltla\",\n            \"label\": \"All usual residents\",\n            \"description\": \"All usual residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-hous-ur-ct-oa\",\n            \"label\": \"All usual residents\",\n            \"description\": \"All usual residents\",\n            \"type\": \"tabular\"\n        },\n        {\n            \"name\": \"atc-ts-hous-urce-ct-msoa\",\n            \"label\": \"All usual residents in communal establishments\",\n            \"description\": \"All usual residents in communal establishments\",\n            \"type\": \"tabular\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "get-area-types",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.beta.ons.gov.uk/v1/population-types"
+			},
+			"response": [
+				{
+					"name": "area-types",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://api.beta.ons.gov.uk/v1/population-types/atc-ts-hous-ur-ct-oa/area-types/lsoa/areas"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jul 2023 00:26:56 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, GET, HEAD, POST, PUT, OPTIONS, PATCH"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e23b8156aadf498-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"limit\": 30,\n    \"offset\": 0,\n    \"count\": 30,\n    \"total_count\": 35672,\n    \"items\": [\n        {\n            \"id\": \"E01000001\",\n            \"label\": \"City of London 001A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000002\",\n            \"label\": \"City of London 001B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000003\",\n            \"label\": \"City of London 001C\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000005\",\n            \"label\": \"City of London 001E\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000006\",\n            \"label\": \"Barking and Dagenham 016A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000007\",\n            \"label\": \"Barking and Dagenham 015A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000008\",\n            \"label\": \"Barking and Dagenham 015B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000009\",\n            \"label\": \"Barking and Dagenham 016B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000011\",\n            \"label\": \"Barking and Dagenham 016C\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000012\",\n            \"label\": \"Barking and Dagenham 015D\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000013\",\n            \"label\": \"Barking and Dagenham 013A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000014\",\n            \"label\": \"Barking and Dagenham 013B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000015\",\n            \"label\": \"Barking and Dagenham 009A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000016\",\n            \"label\": \"Barking and Dagenham 009B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000017\",\n            \"label\": \"Barking and Dagenham 009C\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000018\",\n            \"label\": \"Barking and Dagenham 009D\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000019\",\n            \"label\": \"Barking and Dagenham 023A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000020\",\n            \"label\": \"Barking and Dagenham 023B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000021\",\n            \"label\": \"Barking and Dagenham 008A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000022\",\n            \"label\": \"Barking and Dagenham 008B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000024\",\n            \"label\": \"Barking and Dagenham 008D\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000025\",\n            \"label\": \"Barking and Dagenham 008E\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000027\",\n            \"label\": \"Barking and Dagenham 001A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000028\",\n            \"label\": \"Barking and Dagenham 001B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000029\",\n            \"label\": \"Barking and Dagenham 001C\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000030\",\n            \"label\": \"Barking and Dagenham 001D\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000031\",\n            \"label\": \"Barking and Dagenham 002A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000032\",\n            \"label\": \"Barking and Dagenham 002B\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000033\",\n            \"label\": \"Barking and Dagenham 006A\",\n            \"area_type\": \"lsoa\"\n        },\n        {\n            \"id\": \"E01000034\",\n            \"label\": \"Barking and Dagenham 003A\",\n            \"area_type\": \"lsoa\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "dimensions-for-data",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.beta.ons.gov.uk/v1/population-types/{population-type}/dimensions?q=",
+					"protocol": "https",
+					"host": [
+						"api",
+						"beta",
+						"ons",
+						"gov",
+						"uk"
+					],
+					"path": [
+						"v1",
+						"population-types",
+						"{population-type}",
+						"dimensions"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "dimensions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://api.beta.ons.gov.uk/v1/population-types/atc-rm-pk2-ur-ct-oa/dimensions"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jul 2023 00:36:25 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, GET, HEAD, POST, PUT, OPTIONS, PATCH"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e23c5f8feaef498-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"limit\": 30,\n    \"offset\": 0,\n    \"count\": 10,\n    \"total_count\": 10,\n    \"items\": [\n        {\n            \"id\": \"country_of_birth_12a\",\n            \"label\": \"Country of birth (12 categories)\",\n            \"description\": \"The country in which a person was born.\\n\\nFor people not born in one of in the four parts of the UK, there was an option to select \\\"elsewhere\\\".\\n\\nPeople who selected \\\"elsewhere\\\" were asked to write in the current name for their country of birth.\",\n            \"total_count\": 12,\n            \"quality_statement_text\": \"\"\n        },\n        {\n            \"id\": \"disability_4a\",\n            \"label\": \"Disability - Equality act disabled (4 categories)\",\n            \"description\": \"People who assessed their day-to-day activities as limited by long-term physical or mental health conditions or illnesses are considered disabled. This definition of a disabled person meets the harmonised standard for measuring disability and is in line with the Equality Act (2010).\",\n            \"total_count\": 4,\n            \"quality_statement_text\": \"\"\n        },\n        {\n            \"id\": \"economic_activity_hours_worked\",\n            \"label\": \"Economic activity status and hours worked (20 categories)\",\n            \"description\": \"This is a combination of the economic activity and hours worked variables to categorise people who are in employment by the number of hours that they work per week. It also includes those who are unemployed or economically inactive.\",\n            \"total_count\": 20,\n            \"quality_statement_text\": \"As Census 2021 was during a unique period of rapid change, take care when using this data for planning purposes.\"\n        },\n        {\n            \"id\": \"ethnic_group_tb_8a\",\n            \"label\": \"Ethnic group (8 categories)\",\n            \"description\": \"The ethnic group that the person completing the census feels they belong to. This could be based on their culture, family background, identity or physical appearance.\\n\\nRespondents could choose one out of 19 tick-box response categories, including write-in response options.\",\n            \"total_count\": 8,\n            \"quality_statement_text\": \"\"\n        },\n        {\n            \"id\": \"residence_type\",\n            \"label\": \"Residence type (2 categories)\",\n            \"description\": \"Whether a person lives in a household or a communal establishment. \\nPeople who completed the normal household questionnaire were recorded as living in a household. Those who completed an individual questionnaire were asked if they lived in a household or a communal establishment.\",\n            \"total_count\": 2,\n            \"quality_statement_text\": \"\"\n        },\n        {\n            \"id\": \"resident_age_23a\",\n            \"label\": \"Age (23 categories)\",\n            \"description\": \"A person’s age on Census Day, 21 March 2021 in England and Wales. Infants aged under 1 year are classified as 0 years of age.\",\n            \"total_count\": 23,\n            \"quality_statement_text\": \"Estimates for single year of age between ages 90 and 100+ are less reliable than other ages. Estimation and adjustment at these ages was based on the age range 90+ rather than five-year age bands.\"\n        },\n        {\n            \"id\": \"resident_age_6a\",\n            \"label\": \"Age (6 categories)\",\n            \"description\": \"A person’s age on Census Day, 21 March 2021 in England and Wales. Infants aged under 1 year are classified as 0 years of age.\",\n            \"total_count\": 6,\n            \"quality_statement_text\": \"Estimates for single year of age between ages 90 and 100+ are less reliable than other ages. Estimation and adjustment at these ages was based on the age range 90+ rather than five-year age bands.\"\n        },\n        {\n            \"id\": \"resident_age_7a\",\n            \"label\": \"Age (7 categories)\",\n            \"description\": \"A person’s age on Census Day, 21 March 2021 in England and Wales. Infants aged under 1 year are classified as 0 years of age.\",\n            \"total_count\": 7,\n            \"quality_statement_text\": \"Estimates for single year of age between ages 90 and 100+ are less reliable than other ages. Estimation and adjustment at these ages was based on the age range 90+ rather than five-year age bands.\"\n        },\n        {\n            \"id\": \"sex\",\n            \"label\": \"Sex (2 categories)\",\n            \"description\": \"This is the sex recorded by the person completing the census. The options were “Female” and “Male”.\",\n            \"total_count\": 2,\n            \"quality_statement_text\": \"\"\n        },\n        {\n            \"id\": \"student_accommodation_type_7a\",\n            \"label\": \"Student accommodation type (7 categories)\",\n            \"description\": \"Combines the living situation of students and school children in full-time education, whether they are living: \\n\\n* alone \\n* in a student household \\n* with parents \\n* in a communal establishment, split by university and other communal establishment type \\n* in other household types \\n\\nIt also includes whether these households contain one or multiple families. \\n\\nThis variable is comparable with the student accommodation variable but splits the communal establishment type into “university” and “other” categories.\",\n            \"total_count\": 7,\n            \"quality_statement_text\": \"\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "dimensions-for-data-religion",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.beta.ons.gov.uk/v1/population-types/atc-ts-eilr-ur-ct-msoa/dimensions?q=religion",
+							"protocol": "https",
+							"host": [
+								"api",
+								"beta",
+								"ons",
+								"gov",
+								"uk"
+							],
+							"path": [
+								"v1",
+								"population-types",
+								"atc-ts-eilr-ur-ct-msoa",
+								"dimensions"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "religion"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jul 2023 00:40:23 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, GET, HEAD, POST, PUT, OPTIONS, PATCH"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e23cbcc0e8af498-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"limit\": 30,\n    \"offset\": 0,\n    \"count\": 1,\n    \"total_count\": 2,\n    \"items\": [\n        {\n            \"id\": \"religion_58a\",\n            \"label\": \"Religion (detailed) (58 categories)\",\n            \"description\": \"The religion people connect or identify with (their religious affiliation), whether or not they practise or have belief in it.\\n\\nThis question was voluntary and the variable includes people who answered the question, including \\\"No Religion\\\", alongside those who chose not to answer this question.\\n\\nThis variable classifies responses into the eight tick-box response options. Write-in responses are classified by their \\\"parent\\\" religious affiliation, including \\\"No Religion\\\", where applicable.\",\n            \"total_count\": 58,\n            \"quality_statement_text\": \"\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "categories-for-dimensions",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.beta.ons.gov.uk/v1/population-types/atc-ts-eilr-ur-ct-msoa/dimensions/religion_58a/categorisations"
+			},
+			"response": [
+				{
+					"name": "dimensions-data-for-area-religion",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "https://api.beta.ons.gov.uk/v1/population-types/atc-ts-eilr-ur-ct-msoa/dimensions/religion_58a/categorisations"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jul 2023 00:43:49 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, GET, HEAD, POST, PUT, OPTIONS, PATCH"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e23d0d03852f498-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"limit\": 30,\n    \"offset\": 0,\n    \"count\": 0,\n    \"total_count\": 1,\n    \"items\": [\n        {\n            \"id\": \"religion_58a\",\n            \"label\": \"Religion (detailed) (58 categories)\",\n            \"categories\": [\n                {\n                    \"id\": \"-8\",\n                    \"label\": \"Does not apply\"\n                },\n                {\n                    \"id\": \"1\",\n                    \"label\": \"Christian\"\n                },\n                {\n                    \"id\": \"2\",\n                    \"label\": \"Buddhist\"\n                },\n                {\n                    \"id\": \"3\",\n                    \"label\": \"Hindu\"\n                },\n                {\n                    \"id\": \"4\",\n                    \"label\": \"Jewish\"\n                },\n                {\n                    \"id\": \"5\",\n                    \"label\": \"Muslim\"\n                },\n                {\n                    \"id\": \"6\",\n                    \"label\": \"Sikh\"\n                },\n                {\n                    \"id\": \"7\",\n                    \"label\": \"Other religion: Alevi\"\n                },\n                {\n                    \"id\": \"8\",\n                    \"label\": \"No religion: Agnostic\"\n                },\n                {\n                    \"id\": \"9\",\n                    \"label\": \"No religion: Atheist\"\n                },\n                {\n                    \"id\": \"10\",\n                    \"label\": \"No religion: Free Thinker\"\n                },\n                {\n                    \"id\": \"11\",\n                    \"label\": \"No religion: Humanist\"\n                },\n                {\n                    \"id\": \"12\",\n                    \"label\": \"No religion: No religion\"\n                },\n                {\n                    \"id\": \"13\",\n                    \"label\": \"No religion: Realist\"\n                },\n                {\n                    \"id\": \"14\",\n                    \"label\": \"Other religion: Animism\"\n                },\n                {\n                    \"id\": \"15\",\n                    \"label\": \"Other religion: Baha'i\"\n                },\n                {\n                    \"id\": \"16\",\n                    \"label\": \"Other religion: Believe in God\"\n                },\n                {\n                    \"id\": \"17\",\n                    \"label\": \"Other religion: Brahma Kumari\"\n                },\n                {\n                    \"id\": \"18\",\n                    \"label\": \"Other religion: Chinese Religion\"\n                },\n                {\n                    \"id\": \"19\",\n                    \"label\": \"Other religion: Church of All Religion\"\n                },\n                {\n                    \"id\": \"20\",\n                    \"label\": \"Other religion: Confucianist\"\n                },\n                {\n                    \"id\": \"21\",\n                    \"label\": \"Other religion: Deist\"\n                },\n                {\n                    \"id\": \"22\",\n                    \"label\": \"Other religion: Druid\"\n                },\n                {\n                    \"id\": \"23\",\n                    \"label\": \"Other religion: Druze\"\n                },\n                {\n                    \"id\": \"24\",\n                    \"label\": \"Other religion: Eckankar\"\n                },\n                {\n                    \"id\": \"25\",\n                    \"label\": \"Other religion: Heathen\"\n                },\n                {\n                    \"id\": \"26\",\n                    \"label\": \"Other religion: Jain\"\n                },\n                {\n                    \"id\": \"27\",\n                    \"label\": \"Other religion: Mixed Religion\"\n                },\n                {\n                    \"id\": \"28\",\n                    \"label\": \"Other religion: Mysticism\"\n                },\n                {\n                    \"id\": \"29\",\n                    \"label\": \"Other religion: Native American Church\"\n                },\n                {\n                    \"id\": \"30\",\n                    \"label\": \"Other religion: New Age\"\n                },\n                {\n                    \"id\": \"31\",\n                    \"label\": \"Other religion: Occult\"\n                },\n                {\n                    \"id\": \"32\",\n                    \"label\": \"Other religion: Other religions\"\n                },\n                {\n                    \"id\": \"33\",\n                    \"label\": \"Other religion: Own Belief System\"\n                },\n                {\n                    \"id\": \"34\",\n                    \"label\": \"Other religion: Pagan\"\n                },\n                {\n                    \"id\": \"35\",\n                    \"label\": \"Other religion: Pantheism\"\n                },\n                {\n                    \"id\": \"36\",\n                    \"label\": \"Other religion: Rastafarian\"\n                },\n                {\n                    \"id\": \"37\",\n                    \"label\": \"Other religion: Ravidassia\"\n                },\n                {\n                    \"id\": \"38\",\n                    \"label\": \"Other religion: Reconstructionist\"\n                },\n                {\n                    \"id\": \"39\",\n                    \"label\": \"Other religion: Satanism\"\n                },\n                {\n                    \"id\": \"40\",\n                    \"label\": \"Other religion: Scientology\"\n                },\n                {\n                    \"id\": \"41\",\n                    \"label\": \"Other religion: Shamanism\"\n                },\n                {\n                    \"id\": \"42\",\n                    \"label\": \"Other religion: Shintoism\"\n                },\n                {\n                    \"id\": \"43\",\n                    \"label\": \"Other religion: Spiritual\"\n                },\n                {\n                    \"id\": \"44\",\n                    \"label\": \"Other religion: Spiritualist\"\n                },\n                {\n                    \"id\": \"45\",\n                    \"label\": \"Other religion: Taoist\"\n                },\n                {\n                    \"id\": \"46\",\n                    \"label\": \"Other religion: Theism\"\n                },\n                {\n                    \"id\": \"47\",\n                    \"label\": \"Other religion: Thelemite\"\n                },\n                {\n                    \"id\": \"48\",\n                    \"label\": \"Other religion: Traditional African Religion\"\n                },\n                {\n                    \"id\": \"49\",\n                    \"label\": \"Other religion: Unification Church\"\n                },\n                {\n                    \"id\": \"50\",\n                    \"label\": \"Other religion: Universalist\"\n                },\n                {\n                    \"id\": \"51\",\n                    \"label\": \"Other religion: Valmiki\"\n                },\n                {\n                    \"id\": \"52\",\n                    \"label\": \"Other religion: Vodun\"\n                },\n                {\n                    \"id\": \"53\",\n                    \"label\": \"Other religion: Wicca\"\n                },\n                {\n                    \"id\": \"54\",\n                    \"label\": \"Other religion: Witchcraft\"\n                },\n                {\n                    \"id\": \"55\",\n                    \"label\": \"Other religion: Yazidi\"\n                },\n                {\n                    \"id\": \"56\",\n                    \"label\": \"Other religion: Zoroastrian\"\n                },\n                {\n                    \"id\": \"57\",\n                    \"label\": \"Not answered\"\n                }\n            ],\n            \"quality_statement_text\": \"\",\n            \"default_categorisation\": false\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "dimensions-filtered-data (final data)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.beta.ons.gov.uk/v1/population-types/UR/census-observations?area-type=ctry,E92000001&dimensions=health_in_general,highest_qualification",
+					"protocol": "https",
+					"host": [
+						"api",
+						"beta",
+						"ons",
+						"gov",
+						"uk"
+					],
+					"path": [
+						"v1",
+						"population-types",
+						"UR",
+						"census-observations"
+					],
+					"query": [
+						{
+							"key": "area-type",
+							"value": "ctry,E92000001"
+						},
+						{
+							"key": "dimensions",
+							"value": "health_in_general,highest_qualification"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api.beta.ons.gov.uk/v1/population-types/UR/census-observations?area-type=ctry,E92000001&dimensions=health_in_general,highest_qualification",
+							"protocol": "https",
+							"host": [
+								"api",
+								"beta",
+								"ons",
+								"gov",
+								"uk"
+							],
+							"path": [
+								"v1",
+								"population-types",
+								"UR",
+								"census-observations"
+							],
+							"query": [
+								{
+									"key": "area-type",
+									"value": "ctry,E92000001"
+								},
+								{
+									"key": "dimensions",
+									"value": "health_in_general,highest_qualification"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Thu, 06 Jul 2023 00:42:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Allow",
+							"value": "DELETE, GET, HEAD, POST, PUT, OPTIONS, PATCH"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000; includeSubDomains"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7e23cf3d7fd5f498-BOM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "gzip"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"observations\": [\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                }\n            ],\n            \"observation\": 0\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"No qualifications\",\n                    \"option_id\": \"0\"\n                }\n            ],\n            \"observation\": 0\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 1 and entry level qualifications: 1 to 4 GCSEs grade A* to C, Any GCSEs at other grades, O levels or CSEs (any grades), 1 AS level, NVQ level 1, Foundation GNVQ, Basic or Essential Skills\",\n                    \"option_id\": \"1\"\n                }\n            ],\n            \"observation\": 0\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 2 qualifications: 5 or more GCSEs (A* to C or 9 to 4), O levels (passes), CSEs (grade 1), School Certification, 1 A level, 2 to 3 AS levels, VCEs, Intermediate or Higher Diploma, Welsh Baccalaureate Intermediate Diploma, NVQ level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First or General Diploma, RSA Diploma\",\n                    \"option_id\": \"2\"\n                }\n            ],\n            \"observation\": 0\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Apprenticeship\",\n                    \"option_id\": \"3\"\n                }\n            ],\n            \"observation\": 0\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 3 qualifications: 2 or more A levels or VCEs, 4 or more AS levels, Higher School Certificate, Progression or Advanced Diploma, Welsh Baccalaureate Advance Diploma, NVQ level 3; Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma\",\n                    \"option_id\": \"4\"\n                }\n            ],\n            \"observation\": 0\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 4 qualifications or above: degree (BA, BSc), higher degree (MA, PhD, PGCE), NVQ level 4 to 5, HNC, HND, RSA Higher Diploma, BTEC Higher level, professional qualifications (for example, teaching, nursing, accountancy)\",\n                    \"option_id\": \"5\"\n                }\n            ],\n            \"observation\": 0\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Other: vocational or work-related qualifications, other qualifications achieved in England or Wales, qualifications achieved outside England or Wales (equivalent not stated or unknown)\",\n                    \"option_id\": \"6\"\n                }\n            ],\n            \"observation\": 0\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very good health\",\n                    \"option_id\": \"1\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                }\n            ],\n            \"observation\": 8525036\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very good health\",\n                    \"option_id\": \"1\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"No qualifications\",\n                    \"option_id\": \"0\"\n                }\n            ],\n            \"observation\": 1964351\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very good health\",\n                    \"option_id\": \"1\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 1 and entry level qualifications: 1 to 4 GCSEs grade A* to C, Any GCSEs at other grades, O levels or CSEs (any grades), 1 AS level, NVQ level 1, Foundation GNVQ, Basic or Essential Skills\",\n                    \"option_id\": \"1\"\n                }\n            ],\n            \"observation\": 1487764\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very good health\",\n                    \"option_id\": \"1\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 2 qualifications: 5 or more GCSEs (A* to C or 9 to 4), O levels (passes), CSEs (grade 1), School Certification, 1 A level, 2 to 3 AS levels, VCEs, Intermediate or Higher Diploma, Welsh Baccalaureate Intermediate Diploma, NVQ level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First or General Diploma, RSA Diploma\",\n                    \"option_id\": \"2\"\n                }\n            ],\n            \"observation\": 2676807\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very good health\",\n                    \"option_id\": \"1\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Apprenticeship\",\n                    \"option_id\": \"3\"\n                }\n            ],\n            \"observation\": 790857\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very good health\",\n                    \"option_id\": \"1\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 3 qualifications: 2 or more A levels or VCEs, 4 or more AS levels, Higher School Certificate, Progression or Advanced Diploma, Welsh Baccalaureate Advance Diploma, NVQ level 3; Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma\",\n                    \"option_id\": \"4\"\n                }\n            ],\n            \"observation\": 3647397\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very good health\",\n                    \"option_id\": \"1\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 4 qualifications or above: degree (BA, BSc), higher degree (MA, PhD, PGCE), NVQ level 4 to 5, HNC, HND, RSA Higher Diploma, BTEC Higher level, professional qualifications (for example, teaching, nursing, accountancy)\",\n                    \"option_id\": \"5\"\n                }\n            ],\n            \"observation\": 7909756\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very good health\",\n                    \"option_id\": \"1\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Other: vocational or work-related qualifications, other qualifications achieved in England or Wales, qualifications achieved outside England or Wales (equivalent not stated or unknown)\",\n                    \"option_id\": \"6\"\n                }\n            ],\n            \"observation\": 388861\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Good health\",\n                    \"option_id\": \"2\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                }\n            ],\n            \"observation\": 1666515\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Good health\",\n                    \"option_id\": \"2\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"No qualifications\",\n                    \"option_id\": \"0\"\n                }\n            ],\n            \"observation\": 2992958\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Good health\",\n                    \"option_id\": \"2\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 1 and entry level qualifications: 1 to 4 GCSEs grade A* to C, Any GCSEs at other grades, O levels or CSEs (any grades), 1 AS level, NVQ level 1, Foundation GNVQ, Basic or Essential Skills\",\n                    \"option_id\": \"1\"\n                }\n            ],\n            \"observation\": 1852994\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Good health\",\n                    \"option_id\": \"2\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 2 qualifications: 5 or more GCSEs (A* to C or 9 to 4), O levels (passes), CSEs (grade 1), School Certification, 1 A level, 2 to 3 AS levels, VCEs, Intermediate or Higher Diploma, Welsh Baccalaureate Intermediate Diploma, NVQ level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First or General Diploma, RSA Diploma\",\n                    \"option_id\": \"2\"\n                }\n            ],\n            \"observation\": 2343502\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Good health\",\n                    \"option_id\": \"2\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Apprenticeship\",\n                    \"option_id\": \"3\"\n                }\n            ],\n            \"observation\": 984779\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Good health\",\n                    \"option_id\": \"2\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 3 qualifications: 2 or more A levels or VCEs, 4 or more AS levels, Higher School Certificate, Progression or Advanced Diploma, Welsh Baccalaureate Advance Diploma, NVQ level 3; Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma\",\n                    \"option_id\": \"4\"\n                }\n            ],\n            \"observation\": 2980863\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Good health\",\n                    \"option_id\": \"2\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 4 qualifications or above: degree (BA, BSc), higher degree (MA, PhD, PGCE), NVQ level 4 to 5, HNC, HND, RSA Higher Diploma, BTEC Higher level, professional qualifications (for example, teaching, nursing, accountancy)\",\n                    \"option_id\": \"5\"\n                }\n            ],\n            \"observation\": 5719819\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Good health\",\n                    \"option_id\": \"2\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Other: vocational or work-related qualifications, other qualifications achieved in England or Wales, qualifications achieved outside England or Wales (equivalent not stated or unknown)\",\n                    \"option_id\": \"6\"\n                }\n            ],\n            \"observation\": 499305\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Fair health\",\n                    \"option_id\": \"3\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                }\n            ],\n            \"observation\": 231659\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Fair health\",\n                    \"option_id\": \"3\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"No qualifications\",\n                    \"option_id\": \"0\"\n                }\n            ],\n            \"observation\": 2180586\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Fair health\",\n                    \"option_id\": \"3\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 1 and entry level qualifications: 1 to 4 GCSEs grade A* to C, Any GCSEs at other grades, O levels or CSEs (any grades), 1 AS level, NVQ level 1, Foundation GNVQ, Basic or Essential Skills\",\n                    \"option_id\": \"1\"\n                }\n            ],\n            \"observation\": 795329\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Fair health\",\n                    \"option_id\": \"3\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 2 qualifications: 5 or more GCSEs (A* to C or 9 to 4), O levels (passes), CSEs (grade 1), School Certification, 1 A level, 2 to 3 AS levels, VCEs, Intermediate or Higher Diploma, Welsh Baccalaureate Intermediate Diploma, NVQ level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First or General Diploma, RSA Diploma\",\n                    \"option_id\": \"2\"\n                }\n            ],\n            \"observation\": 811581\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Fair health\",\n                    \"option_id\": \"3\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Apprenticeship\",\n                    \"option_id\": \"3\"\n                }\n            ],\n            \"observation\": 478967\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Fair health\",\n                    \"option_id\": \"3\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 3 qualifications: 2 or more A levels or VCEs, 4 or more AS levels, Higher School Certificate, Progression or Advanced Diploma, Welsh Baccalaureate Advance Diploma, NVQ level 3; Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma\",\n                    \"option_id\": \"4\"\n                }\n            ],\n            \"observation\": 872527\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Fair health\",\n                    \"option_id\": \"3\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 4 qualifications or above: degree (BA, BSc), higher degree (MA, PhD, PGCE), NVQ level 4 to 5, HNC, HND, RSA Higher Diploma, BTEC Higher level, professional qualifications (for example, teaching, nursing, accountancy)\",\n                    \"option_id\": \"5\"\n                }\n            ],\n            \"observation\": 1509619\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Fair health\",\n                    \"option_id\": \"3\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Other: vocational or work-related qualifications, other qualifications achieved in England or Wales, qualifications achieved outside England or Wales (equivalent not stated or unknown)\",\n                    \"option_id\": \"6\"\n                }\n            ],\n            \"observation\": 267075\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Bad health\",\n                    \"option_id\": \"4\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                }\n            ],\n            \"observation\": 45684\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Bad health\",\n                    \"option_id\": \"4\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"No qualifications\",\n                    \"option_id\": \"0\"\n                }\n            ],\n            \"observation\": 881298\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Bad health\",\n                    \"option_id\": \"4\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 1 and entry level qualifications: 1 to 4 GCSEs grade A* to C, Any GCSEs at other grades, O levels or CSEs (any grades), 1 AS level, NVQ level 1, Foundation GNVQ, Basic or Essential Skills\",\n                    \"option_id\": \"1\"\n                }\n            ],\n            \"observation\": 253898\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Bad health\",\n                    \"option_id\": \"4\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 2 qualifications: 5 or more GCSEs (A* to C or 9 to 4), O levels (passes), CSEs (grade 1), School Certification, 1 A level, 2 to 3 AS levels, VCEs, Intermediate or Higher Diploma, Welsh Baccalaureate Intermediate Diploma, NVQ level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First or General Diploma, RSA Diploma\",\n                    \"option_id\": \"2\"\n                }\n            ],\n            \"observation\": 235392\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Bad health\",\n                    \"option_id\": \"4\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Apprenticeship\",\n                    \"option_id\": \"3\"\n                }\n            ],\n            \"observation\": 148833\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Bad health\",\n                    \"option_id\": \"4\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 3 qualifications: 2 or more A levels or VCEs, 4 or more AS levels, Higher School Certificate, Progression or Advanced Diploma, Welsh Baccalaureate Advance Diploma, NVQ level 3; Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma\",\n                    \"option_id\": \"4\"\n                }\n            ],\n            \"observation\": 227054\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Bad health\",\n                    \"option_id\": \"4\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 4 qualifications or above: degree (BA, BSc), higher degree (MA, PhD, PGCE), NVQ level 4 to 5, HNC, HND, RSA Higher Diploma, BTEC Higher level, professional qualifications (for example, teaching, nursing, accountancy)\",\n                    \"option_id\": \"5\"\n                }\n            ],\n            \"observation\": 368506\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Bad health\",\n                    \"option_id\": \"4\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Other: vocational or work-related qualifications, other qualifications achieved in England or Wales, qualifications achieved outside England or Wales (equivalent not stated or unknown)\",\n                    \"option_id\": \"6\"\n                }\n            ],\n            \"observation\": 87593\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very bad health\",\n                    \"option_id\": \"5\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Does not apply\",\n                    \"option_id\": \"-8\"\n                }\n            ],\n            \"observation\": 14197\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very bad health\",\n                    \"option_id\": \"5\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"No qualifications\",\n                    \"option_id\": \"0\"\n                }\n            ],\n            \"observation\": 298597\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very bad health\",\n                    \"option_id\": \"5\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 1 and entry level qualifications: 1 to 4 GCSEs grade A* to C, Any GCSEs at other grades, O levels or CSEs (any grades), 1 AS level, NVQ level 1, Foundation GNVQ, Basic or Essential Skills\",\n                    \"option_id\": \"1\"\n                }\n            ],\n            \"observation\": 66212\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very bad health\",\n                    \"option_id\": \"5\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 2 qualifications: 5 or more GCSEs (A* to C or 9 to 4), O levels (passes), CSEs (grade 1), School Certification, 1 A level, 2 to 3 AS levels, VCEs, Intermediate or Higher Diploma, Welsh Baccalaureate Intermediate Diploma, NVQ level 2, Intermediate GNVQ, City and Guilds Craft, BTEC First or General Diploma, RSA Diploma\",\n                    \"option_id\": \"2\"\n                }\n            ],\n            \"observation\": 58846\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very bad health\",\n                    \"option_id\": \"5\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Apprenticeship\",\n                    \"option_id\": \"3\"\n                }\n            ],\n            \"observation\": 43500\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very bad health\",\n                    \"option_id\": \"5\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 3 qualifications: 2 or more A levels or VCEs, 4 or more AS levels, Higher School Certificate, Progression or Advanced Diploma, Welsh Baccalaureate Advance Diploma, NVQ level 3; Advanced GNVQ, City and Guilds Advanced Craft, ONC, OND, BTEC National, RSA Advanced Diploma\",\n                    \"option_id\": \"4\"\n                }\n            ],\n            \"observation\": 57136\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very bad health\",\n                    \"option_id\": \"5\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Level 4 qualifications or above: degree (BA, BSc), higher degree (MA, PhD, PGCE), NVQ level 4 to 5, HNC, HND, RSA Higher Diploma, BTEC Higher level, professional qualifications (for example, teaching, nursing, accountancy)\",\n                    \"option_id\": \"5\"\n                }\n            ],\n            \"observation\": 98758\n        },\n        {\n            \"dimensions\": [\n                {\n                    \"dimension\": \"Countries\",\n                    \"dimension_id\": \"ctry\",\n                    \"option\": \"England\",\n                    \"option_id\": \"E92000001\"\n                },\n                {\n                    \"dimension\": \"General health (6 categories)\",\n                    \"dimension_id\": \"health_in_general\",\n                    \"option\": \"Very bad health\",\n                    \"option_id\": \"5\"\n                },\n                {\n                    \"dimension\": \"Highest level of qualification (8 categories)\",\n                    \"dimension_id\": \"highest_qualification\",\n                    \"option\": \"Other: vocational or work-related qualifications, other qualifications achieved in England or Wales, qualifications achieved outside England or Wales (equivalent not stated or unknown)\",\n                    \"option_id\": \"6\"\n                }\n            ],\n            \"observation\": 25635\n        }\n    ],\n    \"links\": {\n        \"self\": {\n            \"href\": \"/population-types/UR/census-observations?area-type=ctry,E92000001&dimensions=health_in_general,highest_qualification\"\n        }\n    },\n    \"total_observations\": 48,\n    \"blocked_areas\": 0,\n    \"total_areas\": 1,\n    \"areas_returned\": 1\n}"
+				}
+			]
+		}
+	]
+}

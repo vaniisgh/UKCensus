@@ -1,5 +1,6 @@
 import requests
 import time
+import pandas as pd
 import polars as pl
 import psycopg2
 import json
@@ -43,9 +44,15 @@ class RateLimitedAPI:
         result = response.json()
 
         if response.status_code == 200:
+            if return_type == "df":
+                try:
+                    return pd.DataFrame(result["items"])
+                except KeyError:
+                    return pd.DataFrame(result)
             if return_type == "pl_df":
                 try:
-                        return pl.from_dict(result["items"])
+                    response = pd.DataFrame(result["items"])
+                    return pl.from_pandas(response)
                 except KeyError:
                     if return_type == "pl_df":
                         return pl.from_dict(result)
@@ -56,6 +63,28 @@ class RateLimitedAPI:
                     return result
         else:
             raise Exception(f"Request failed with status code {response.status_code}")
+        
+
+        total_count = response["total_count"]
+    # # Set the limit and offset values for pagination
+    # limit = 500
+    # offset = 0
+
+    # # Fetch the remaining data sequentially using pagination
+    # while offset < total_count:
+    #     endpoint = "population-types"
+    #     params = {
+    #         "limit": limit,
+    #         "offset": offset
+    #     }
+    #     response = self.make_request(endpoint, params)
+    #     self.create_table_if_not_exists(tablename)
+    #     self.add_to_database(tablename, response)
+
+    #     # Increment the offset for the next page
+    #     offset += limit
+
+    # return response
 
     def reset_timer(self):
         self.start_time = time.time()
@@ -95,6 +124,18 @@ class RateLimitedAPI:
     def get_population_types(self, return_type="json"):
         endpoint = "population-types"
         self.create_table_if_not_exists(endpoint)
+        response = self.make_request(endpoint, return_type)
+
+        self.add_to_database(endpoint, response)
+
+        return response
+
+    def get_area_types(self, population_type, return_type="json"):
+        
+        endpoint = "area-types"
+        self.create_table_if_not_exists(endpoint)
+
+        endpoint = 'population-types/{population_type}/area-types/lsoa/areas'.format(population_type=population_type)
         response = self.make_request(endpoint, return_type)
 
         self.add_to_database(endpoint, response)
