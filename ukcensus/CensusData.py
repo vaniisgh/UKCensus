@@ -44,6 +44,7 @@ class RateLimitedAPI:
             self.reset_timer()
 
         url = f"{self.base_url}/{endpoint}"
+        print(f"Making request to {url}")
         response = requests.get(url, params=params)
         self.requests_made += 1
         result = response.json()
@@ -67,6 +68,11 @@ class RateLimitedAPI:
                 **p
             }
             response = self.make_request(endpoint, params=params)
+            if "observations" in response:
+                results = response["observations"]
+                total_count = 1
+                break
+            
             if total_count == -1:
                 total_count = response["total_count"]
             
@@ -156,8 +162,8 @@ class RateLimitedAPI:
             self.create_table_if_not_exists("area-types")
 
             select_query = """
-                SELECT data->>'name' as name FROM "population-types" where data->>'label' = '{}'
-                """.format("All usual residents")
+                SELECT data->>'name' as name FROM "population-types" where data->>'type' = '{}'
+                """.format("microdata")
 
             response = self.get_results_from_database(select_query)
 
@@ -217,8 +223,8 @@ class RateLimitedAPI:
             self.create_table_if_not_exists("dimensions")
 
             select_query = """
-                SELECT data->>'name' as name FROM "population-types" where data->>'label' = '{}'
-                """.format("All usual residents")
+                SELECT data->>'name' as name FROM "population-types" where data->>'type' = '{}'
+                """.format("microdata")
 
             response = self.get_results_from_database(select_query)
 
@@ -235,4 +241,90 @@ class RateLimitedAPI:
         
         return response
     
+
+    def get_categories(self,dimension_id = "hh_multi_religion"):
+        select_categories = """
+                SELECT * from "categories" where data->>'dimension' = '{}'
+                """.format(dimension_id)
+        try:
+            response = self.get_results_from_database(select_categories)
+            if response.empty:
+                raise UndefinedTable
+        except UndefinedTable:
+            self.create_table_if_not_exists("categories")
+
+            select_query = """
+                    SELECT data->>'id' as dimension, data->> 'population-type' as population
+                        FROM "dimensions" where data->>'id' = '{}'
+                    """.format(dimension_id)
+            dimension = self.get_results_from_database(select_query)
+            for _, row in dimension.iterrows():
+                population = row.population
+                dimension_id = row.dimension
+                endpoint = '/population-types/{population_type}/' \
+                        '/dimensions/{dimension_id}/categorisations'\
+                            .format(population_type=population, dimension_id=dimension_id)
+                response = self.fetch_all_data(endpoint, return_type="json")
+                for item in response:
+                    self.add_to_database("categories", item)
+        
+        response = self.get_results_from_database(select_categories)
+        return response
+
+
+    def get_data_final(self,return_type="json", dimension_id = "hh_multi_religion"):
+        data_query = """
+        SELECT * FROM "data_mt" where data->>'dimension_id' = '{}'
+        """.format(dimension_id)
+
+        try:
+            response = self.get_results_from_database(data_query)
+            if len(response) <1 :
+                raise UndefinedTable
+        except UndefinedTable:
+            endpoint = "data_mt"
+            self.create_table_if_not_exists("data_mt")
+
+            select_query = """
+                SELECT data->>'name' as population
+                  FROM "population-types" where data->>'type' = '{}'
+                """.format("microdata")
+
+
+            populations = self.get_results_from_database(select_query)
+
+            for _,row in populations.iterrows():
+                select_query = """
+                SELECT data->>'id' as dimension
+                  FROM "dimensions" where data->>'population-type' = '{}'
+                """.format(row.population)
+                dimension = self.get_results_from_database(select_query)
+
+                get_area_types = """
+                SELECT data->>'id' as area_type
+                    FROM "area-types" where data->>'population-type' = '{}'
+                """.format(row.population)
+                area_types = self.get_results_from_database(get_area_types)['area_type'].to_list()
+
+                get_area_codes = """
+                SELECT data->>'id' as area_code, data->>'area_type' as area_type
+                    FROM "area-infos" where data->>'area_type' = ANY(ARRAY['{}'])
+                """.format("','".join(area_types))
+                area_codes = self.get_results_from_database(get_area_codes)
+
+                for _, sub_row in dimension.iterrows():
+                    population_type = row.population
+                    dimension_id = sub_row.dimension
+                    for _, area in area_codes.iterrows():
+                        endpoint = 'population-types/{population_type}/census-observations?area-type={area_type},{area_code}&dimensions={dimestion_id}'\
+                            '&limit={limit}'.format(population_type=population_type, dimestion_id=dimension_id, area_type=area.area_type, area_code=area.area_code, limit=1000)
+                        response = self.fetch_all_data(endpoint, return_type, p={})
+                        response = [dict(item, **{'population-type':population_type, 'dimension-id': dimension_id}) for item in response]
+                        for item in response:
+                            self.add_to_database("data_mt", item)
+            
+            response = self.get_results_from_database(data_query)
+        
+        return response
+
 
